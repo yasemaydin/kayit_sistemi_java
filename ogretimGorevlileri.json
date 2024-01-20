@@ -1,0 +1,22 @@
+[
+  {"OgretmenNo": 123, "Bolum": "Bilgisayar Mühendisliği", "Ad": "Ahmet", "Soyad": "Yılmaz"},
+  {"OgretmenNo": 456, "Bolum": "Elektrik Mühendisliği", "Ad": "Ayşe", "Soyad": "Demir"},
+  {"OgretmenNo": 202, "Bolum": "ererew", "Ad": "enes", "Soyad": "salman"},
+  {"OgretmenNo": 232, "Bolum": "bilgisayar prog", "Ad": "mehmey", "Soyad": "yılmaz"},
+  {"OgretmenNo": 321, "Bolum": "Makine Mühendisliği", "Ad": "Veli", "Soyad": "Kara"},
+  {"OgretmenNo": 789, "Bolum": "Jeoloji Mühendisliği", "Ad": "Nihan", "Soyad": "Erdogan"},
+  {"OgretmenNo": 444, "Bolum": "Kimya Mühendisliği", "Ad": "Kaan", "Soyad": "Yilmaz"},
+  {"OgretmenNo": 555, "Bolum": "Fizik", "Ad": "Sena", "Soyad": "Aydin"},
+  {"OgretmenNo": 777, "Bolum": "Moleküler Biyoloji", "Ad": "Ozan", "Soyad": "Cetin"},
+  {"OgretmenNo": 888, "Bolum": "Tarih", "Ad": "Ece", "Soyad": "Arslan"},
+  {"OgretmenNo": 999, "Bolum": "Edebiyat", "Ad": "Bilge", "Soyad": "Uzun"},
+  {"OgretmenNo": 111, "Bolum": "Sosyoloji", "Ad": "Cem", "Soyad": "Yavuz"},
+  {"OgretmenNo": 222, "Bolum": "Psikoloji", "Ad": "Nazan", "Soyad": "Bulut"},
+  {"OgretmenNo": 333, "Bolum": "İktisat", "Ad": "Soner", "Soyad": "Erdogan"},
+  {"OgretmenNo": 101, "Bolum": "Hukuk", "Ad": "Ilayda", "Soyad": "Kaya"},
+  {"OgretmenNo": 202, "Bolum": "İnşaat Mühendisliği", "Ad": "Umut", "Soyad": "Aydin"},
+  {"OgretmenNo": 303, "Bolum": "Güzel Sanatlar", "Ad": "İrem", "Soyad": "Kilic"},
+  {"OgretmenNo": 404, "Bolum": "Coğrafya", "Ad": "Yagmur", "Soyad": "Cevik"},
+  {"OgretmenNo": 505, "Bolum": "Endüstri Mühendisliği", "Ad": "Mert", "Soyad": "Kurt"},
+  {"OgretmenNo": 606, "Bolum": "Elektrik Elektronik Mühendisliği", "Ad": "Simge", "Soyad": "Arslan"}
+]
