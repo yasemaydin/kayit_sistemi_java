@@ -1,287 +1,4 @@
-//import org.json.simple.JSONObject;
-//
-//import javax.swing.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
-//import java.io.FileWriter;
-//import java.io.IOException;
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//public class OgretimGorevlisiFormu extends JFrame {
-//    private JTextField ogretmenNoField;
-//    private JTextField adField;
-//    private JTextField soyadField;
-//    private JTextField bolumField;
-//    private JComboBox<String> verdigiDerslerComboBox;
-//    private JButton kaydetButton;
-//    private JButton dersEkleButton;
-//    private JButton dersSilButton;
-//
-//    public OgretimGorevlisiFormu() {
-//        setTitle("Öğretim Görevlisi Formu");
-//        setSize(400, 300);
-//        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-//
-//        ogretmenNoField = new JTextField();
-//        adField = new JTextField();
-//        soyadField = new JTextField();
-//        bolumField = new JTextField();
-//        verdigiDerslerComboBox = new JComboBox<>();
-//        kaydetButton = new JButton("Kaydet");
-//
-//        List<String> dersler = okuDersler("dersler.json");
-//        for (String ders : dersler) {
-//            verdigiDerslerComboBox.addItem(ders);
-//        }
-////        dersEkleButton = new JButton("Ders Ekle");
-////        dersEkleButton.addActionListener(new ActionListener() {
-////            @Override
-////            public void actionPerformed(ActionEvent e) {
-////                String yeniDers = JOptionPane.showInputDialog("Yeni Ders Adı:");
-////                verdigiDerslerComboBox.addItem(yeniDers);
-////            }
-////        });
-////        dersSilButton = new JButton("Ders Sil");
-////        dersSilButton.addActionListener(new ActionListener() {
-////            @Override
-////            public void actionPerformed(ActionEvent e) {
-////                int selectedIndex = verdigiDerslerComboBox.getSelectedIndex();
-////                if (selectedIndex != -1) {
-////                    verdigiDerslerComboBox.removeItemAt(selectedIndex);
-////                }
-////            }
-////        });
-//        kaydetButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                kaydetOgretimGorevlisi();
-//                dispose();
-//                JOptionPane.showMessageDialog(null, "Öğretim Görevlisi başarıyla kaydedildi!");
-//
-//            }
-//        });
-//
-//        add(new JLabel("Öğretmen No:"));
-//        add(ogretmenNoField);
-//        add(new JLabel("Adı:"));
-//        add(adField);
-//        add(new JLabel("Soyadı:"));
-//        add(soyadField);
-//        add(new JLabel("Bölümü:"));
-//        add(bolumField);
-////        add(new JLabel("Verdiği Dersler:"));
-////        add(verdigiDerslerComboBox);
-////        add(dersEkleButton);
-////        add(dersSilButton);
-//        add(kaydetButton);
-//
-//    }
-//
-//    private void kaydetOgretimGorevlisi() {
-//        JSONObject ogretimGorevlisiJson = new JSONObject();
-//        ogretimGorevlisiJson.put("OgretmenNo", Integer.parseInt(ogretmenNoField.getText()));
-//        ogretimGorevlisiJson.put("Ad", adField.getText());
-//        ogretimGorevlisiJson.put("Soyad", soyadField.getText());
-//        ogretimGorevlisiJson.put("Bolum", bolumField.getText());
-////        ogretimGorevlisiJson.put("VerdigiDersler", verdigiDerslerComboBox.getSelectedItem());
-//
-//        try (FileWriter file = new FileWriter("ogretimGorevlileri.json", true)) {
-//            file.write(ogretimGorevlisiJson.toJSONString() + "\n");
-//            file.flush();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    private List<String> okuDersler(String dosyaAdi) {
-//        List<String> dersler = new ArrayList<>();
-//        // Dersleri dosyadan okuma işlevselliği
-//        return dersler;
-//    }
-//}
-//
-//// (Devam ediyor...)
-//import org.json.simple.JSONObject;
-//
-//import javax.swing.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
-//import java.io.FileWriter;
-//import java.io.IOException;
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//public class OgretimGorevlisiFormu extends JFrame {
-//    private JTextField ogretmenNoField;
-//    private JTextField adField;
-//    private JTextField soyadField;
-//    private JTextField bolumField;
-//    private JButton kaydetButton;
-//
-//    public OgretimGorevlisiFormu() {
-//        setTitle("Öğretim Görevlisi Formu");
-//        setSize(400, 300);
-//        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-//
-//        ogretmenNoField = new JTextField();
-//        adField = new JTextField();
-//        soyadField = new JTextField();
-//        bolumField = new JTextField();
-//        kaydetButton = new JButton("Kaydet");
-//
-//        kaydetButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                kaydetOgretimGorevlisi();
-//                dispose();
-//                JOptionPane.showMessageDialog(null, "Öğretim Görevlisi başarıyla kaydedildi!");
-//            }
-//        });
-//
-//        add(new JLabel("Öğretmen No:"));
-//        add(ogretmenNoField);
-//        add(new JLabel("Adı:"));
-//        add(adField);
-//        add(new JLabel("Soyadı:"));
-//        add(soyadField);
-//        add(new JLabel("Bölümü:"));
-//        add(bolumField);
-//        add(kaydetButton);
-//    }
-//
-//    private void kaydetOgretimGorevlisi() {
-//        JSONObject ogretimGorevlisiJson = new JSONObject();
-//        ogretimGorevlisiJson.put("OgretmenNo", Integer.parseInt(ogretmenNoField.getText()));
-//        ogretimGorevlisiJson.put("Ad", adField.getText());
-//        ogretimGorevlisiJson.put("Soyad", soyadField.getText());
-//        ogretimGorevlisiJson.put("Bolum", bolumField.getText());
-//
-//        try (FileWriter file = new FileWriter("ogretimGorevlileri.json", true)) {
-//            file.write(ogretimGorevlisiJson.toJSONString() + "\n");
-//            file.flush();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//}
-//import org.json.simple.JSONArray;
-//import org.json.simple.JSONObject;
-//import org.json.simple.parser.JSONParser;
-//
-//import javax.swing.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
-//import java.io.FileReader;
-//import java.io.FileWriter;
-//import java.io.IOException;
-//import java.util.ArrayList;
-//import java.util.Iterator;
-//import java.util.List;
-//
-//public class OgretimGorevlisiFormu extends JFrame {
-//    private JTextField ogretmenNoField;
-//    private JTextField adField;
-//    private JTextField soyadField;
-//    private JTextField bolumField;
-//    private JButton kaydetButton;
-//
-//    public OgretimGorevlisiFormu() {
-//        setTitle("Öğretim Görevlisi Formu");
-//        setSize(400, 300);
-//        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-//
-//        ogretmenNoField = new JTextField();
-//        adField = new JTextField();
-//        soyadField = new JTextField();
-//        bolumField = new JTextField();
-//        kaydetButton = new JButton("Kaydet");
-//
-//        kaydetButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                kaydetOgretimGorevlisi();
-//                dispose();
-//                JOptionPane.showMessageDialog(null, "Öğretim Görevlisi başarıyla kaydedildi!");
-//            }
-//        });
-//
-//        add(new JLabel("Öğretmen No:"));
-//        add(ogretmenNoField);
-//        add(new JLabel("Adı:"));
-//        add(adField);
-//        add(new JLabel("Soyadı:"));
-//        add(soyadField);
-//        add(new JLabel("Bölümü:"));
-//        add(bolumField);
-//        add(kaydetButton);
-//    }
-//
-//    private void kaydetOgretimGorevlisi() {
-//        JSONObject ogretimGorevlisiJson = new JSONObject();
-//        ogretimGorevlisiJson.put("OgretmenNo", Integer.parseInt(ogretmenNoField.getText()));
-//        ogretimGorevlisiJson.put("Ad", adField.getText());
-//        ogretimGorevlisiJson.put("Soyad", soyadField.getText());
-//        ogretimGorevlisiJson.put("Bolum", bolumField.getText());
-//
-//        JSONArray ogretimGorevlileriArray = new JSONArray();
-//
-//        // Önce mevcut içeriği oku
-//        List<JSONObject> existingData = okuOgretimGorevlileri("ogretimGorevlileri.json");
-//
-//        // Yeni öğretim görevlisini listeye ekle
-//        existingData.add(ogretimGorevlisiJson);
-//
-//        // Tüm öğretim görevlilerini JSON array'e ekle
-//        for (JSONObject ogretimGorevlisi : existingData) {
-//            ogretimGorevlileriArray.add(ogretimGorevlisi);
-//        }
-//
-//        try (FileWriter file = new FileWriter("ogretimGorevlileri.json")) {
-//            // JSON array'i dosyaya yaz
-//            file.write(ogretimGorevlileriArray.toJSONString());
-//            file.flush();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    private List<JSONObject> okuOgretimGorevlileri(String dosyaAdi) {
-//        List<JSONObject> ogretimGorevlileri = new ArrayList<>();
-//
-//        JSONParser parser = new JSONParser();
-//
-//        try {
-//            Object obj = parser.parse(new FileReader(dosyaAdi));
-//
-//            // JSON array okuma
-//            JSONArray jsonArray = (JSONArray) obj;
-//
-//            // Iterator kullanarak array içinde dolaşma
-//            Iterator<JSONObject> iterator = jsonArray.iterator();
-//            while (iterator.hasNext()) {
-//                ogretimGorevlileri.add(iterator.next());
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        return ogretimGorevlileri;
-//    }
-//
-//    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                new OgretimGorevlisiFormu().setVisible(true);
-//            }
-//        });
-//    }
-//}
-//
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -320,15 +37,18 @@ public class OgretimGorevlisiFormu extends JFrame {
         setLayout(new BorderLayout());
 
         JPanel solPanel = new JPanel();
-        solPanel.setLayout(new GridLayout(6, 2));
+        solPanel.setLayout(new GridBagLayout());
         solPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         setResizable(false);
 
-        ogretmenNoField = new JTextField();
-        adField = new JTextField();
-        soyadField = new JTextField();
-        bolumField = new JTextField();
-        kaydetButton = new JButton("Kaydet");
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(5, 5, 5, 5);
+
+        ogretmenNoField = new JTextField(10);
+        adField = new JTextField(10);
+        soyadField = new JTextField(10);
+        bolumField = new JTextField(10);
+        kaydetButton = createStyledButton("Kaydet");
 
         tableModel = new DefaultTableModel();
         ogretimGorevlisiTable = new JTable(tableModel);
@@ -337,25 +57,52 @@ public class OgretimGorevlisiFormu extends JFrame {
         filterTextField = new JTextField();
         filterTextField.setColumns(20);
         filterTextField.setBorder(new EmptyBorder(5, 10, 5, 10));
-        filterTextField.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                filterOgretimGorevlisiTable();
-            }
-        });
+        filterTextField.addActionListener(e -> filterOgretimGorevlisiTable());
 
-        solPanel.add(createLabel("Öğretmen No:"));
-        solPanel.add(ogretmenNoField);
-        solPanel.add(createLabel("Adı:"));
-        solPanel.add(adField);
-        solPanel.add(createLabel("Soyadı:"));
-        solPanel.add(soyadField);
-        solPanel.add(createLabel("Bölümü:"));
-        solPanel.add(bolumField);
-        solPanel.add(new JLabel());
-        solPanel.add(kaydetButton);
 
-        solPanel.add(new JPanel()); // Boş panel, düzeni korumak için eklendi
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        solPanel.add(createLabel("No:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        solPanel.add(ogretmenNoField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        solPanel.add(createLabel("Adı:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        solPanel.add(adField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        solPanel.add(createLabel("Soyadı:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        solPanel.add(soyadField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        solPanel.add(createLabel("Bölümü:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        solPanel.add(bolumField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 4;
+        gbc.gridwidth = 2;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        solPanel.add(new JPanel(), gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 5;
+        gbc.gridwidth = 2;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        solPanel.add(kaydetButton, gbc);
+
 
         add(solPanel, BorderLayout.WEST);
         add(tableScrollPane, BorderLayout.CENTER);
@@ -372,24 +119,60 @@ public class OgretimGorevlisiFormu extends JFrame {
         kaydetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (validasyonKontrol())
+                {
                 kaydetOgretimGorevlisi();
                 refreshOgretimGorevlisiTable();
                 JOptionPane.showMessageDialog(null, "Öğretim Görevlisi başarıyla kaydedildi!");
-            }
+            }}
         });
 
         refreshOgretimGorevlisiTable();
     }
+    private boolean validasyonKontrol() {
+        try {
+            int ogretmenNo = Integer.parseInt(ogretmenNoField.getText());
 
+            if (ogretmenNo <= 0) {
+                throw new NumberFormatException();
+            }
+
+            return true;
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Geçerli öğretmen numarası girin!", "Hata", JOptionPane.ERROR_MESSAGE);
+            ogretmenNoField.requestFocus();
+            return false;
+        }
+    }
+
+    private JButton createStyledButton(String buttonText) {
+        JButton button = new JButton(buttonText);
+        button.setBackground(new Color(70, 130, 180)); // Steel Blue renk
+        button.setForeground(Color.WHITE);
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setFont(new Font("Arial", Font.BOLD, 14));
+        return button;
+    }
     private void kaydetOgretimGorevlisi() {
         JSONObject ogretimGorevlisiJson = new JSONObject();
         ogretimGorevlisiJson.put("OgretmenNo", Integer.parseInt(ogretmenNoField.getText()));
         ogretimGorevlisiJson.put("Ad", adField.getText());
         ogretimGorevlisiJson.put("Soyad", soyadField.getText());
         ogretimGorevlisiJson.put("Bolum", bolumField.getText());
+        // Read existing data from the file
+        List<JSONObject> existingData = okuOgretimGorevlileri("ogretimGorevlileri.json");
 
-        try (FileWriter file = new FileWriter("ogretimGorevlileri.json", true)) {
-            file.write(ogretimGorevlisiJson.toJSONString() + "\n");
+        // Add the new record to the existing data
+        existingData.add(ogretimGorevlisiJson);
+
+        // Save the updated data back to the file
+        try (FileWriter file = new FileWriter("ogretimGorevlileri.json")) {
+            JSONArray ogretimGorevlileriArray = new JSONArray();
+            for (JSONObject existingRecord : existingData) {
+                ogretimGorevlileriArray.add(existingRecord);
+            }
+            file.write(ogretimGorevlileriArray.toJSONString());
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();

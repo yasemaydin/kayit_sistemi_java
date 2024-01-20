@@ -1,61 +1,4 @@
-//import javax.swing.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
-//
-//public class uygulama extends JFrame {
-//    private JButton dersFormuButton;
-//    private JButton ogrenciFormuButton;
-//    private JButton ogretimGorevlisiFormuButton;
-//
-//    public uygulama() {
-//        setTitle("Uygulama");
-//        setSize(400, 300);
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-//
-//        dersFormuButton = new JButton("Ders Formu");
-//        ogrenciFormuButton = new JButton("Öğrenci Formu");
-//        ogretimGorevlisiFormuButton = new JButton("Öğretim Görevlisi Formu");
-//
-//        dersFormuButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                DersFormu dersFormu = new DersFormu();
-//                dersFormu.setVisible(true);
-//            }
-//        });
-//
-//        ogrenciFormuButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                OgrenciFormu ogrenciFormu = new OgrenciFormu();
-//                ogrenciFormu.setVisible(true);
-//            }
-//        });
-//
-//        ogretimGorevlisiFormuButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                OgretimGorevlisiFormu ogretimGorevlisiFormu = new OgretimGorevlisiFormu();
-//                ogretimGorevlisiFormu.setVisible(true);
-//            }
-//        });
-//
-//        add(dersFormuButton);
-//        add(ogrenciFormuButton);
-//        add(ogretimGorevlisiFormuButton);
-//    }
-//
-//    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                uygulama uygulama = new uygulama();
-//                uygulama.setVisible(true);
-//            }
-//        });
-//    }
-//}
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -72,7 +15,6 @@ public class uygulama extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout(FlowLayout.CENTER, 10, 20)); // 10 pixel yatay, 20 pixel dikey boşluk
 
-        // Buton renk ve stilleri
         dersFormuButton = createStyledButton("Ders");
         ogrenciFormuButton = createStyledButton("Öğrenci");
         ogretimGorevlisiFormuButton = createStyledButton("Öğretim Görevlisi");
@@ -128,7 +70,7 @@ public class uygulama extends JFrame {
             @Override
             public void run() {
                 uygulama uygulama = new uygulama();
-                uygulama.setLocationRelativeTo(null); // Ekranın ortasına konumlandırma
+                uygulama.setLocationRelativeTo(null);
 
                 uygulama.setVisible(true);
             }

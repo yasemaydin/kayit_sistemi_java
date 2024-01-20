@@ -19,14 +19,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Ogrenci {
-    private int ogrenciNo;
+    private long ogrenciNo;
     private String ogrenciAd;
     private String ogrenciSoyad;
     private String ogrenciBolum;
     private String ogrenciDersler;
     private String ogrenciDersKodu;
 
-    public Ogrenci(int ogrenciNo, String ogrenciAd, String ogrenciSoyad, String ogrenciBolum, String ogrenciDersler, String ogrenciDersKodu) {
+    public Ogrenci(long ogrenciNo, String ogrenciAd, String ogrenciSoyad, String ogrenciBolum, String ogrenciDersler, String ogrenciDersKodu) {
         this.ogrenciNo = ogrenciNo;
         this.ogrenciAd = ogrenciAd;
         this.ogrenciSoyad = ogrenciSoyad;
@@ -35,7 +35,7 @@ class Ogrenci {
         this.ogrenciDersKodu = ogrenciDersKodu;
     }
 
-    public int getOgrenciNo() {
+    public long getOgrenciNo() {
         return ogrenciNo;
     }
 
@@ -78,8 +78,8 @@ public class OgrenciFormu extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        JPanel solPanel = new JPanel();
-        solPanel.setLayout(new GridLayout(7, 2));
+        JPanel solPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
         solPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         setResizable(false);
 
@@ -87,7 +87,7 @@ public class OgrenciFormu extends JFrame {
         ogrenciAdField = new JTextField();
         ogrenciSoyadField = new JTextField();
         ogrenciBolumField = new JTextField();
-        kaydetButton = new JButton("Kaydet");
+        kaydetButton = createStyledButton("Kaydet");
 
         tableModel = new DefaultTableModel();
         ogrenciTable = new JTable(tableModel);
@@ -108,20 +108,56 @@ public class OgrenciFormu extends JFrame {
         DefaultComboBoxModel<String> derslerComboBoxModel = new DefaultComboBoxModel<>(dersler.toArray(new String[0]));
         ogrenciDerslerField = new JComboBox<>(derslerComboBoxModel);
 
-        solPanel.add(createLabel("Öğrenci No:"));
-        solPanel.add(ogrenciNoField);
-        solPanel.add(createLabel("Öğrenci Adı:"));
-        solPanel.add(ogrenciAdField);
-        solPanel.add(createLabel("Öğrenci Soyadı:"));
-        solPanel.add(ogrenciSoyadField);
-        solPanel.add(createLabel("Öğrenci Bölümü:"));
-        solPanel.add(ogrenciBolumField);
-        solPanel.add(createLabel("Öğrenci Dersleri:"));
-        solPanel.add(ogrenciDerslerField);
-        solPanel.add(new JLabel());
-        solPanel.add(kaydetButton);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        solPanel.add(createLabel("Öğrenci No:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        solPanel.add(ogrenciNoField, gbc);
 
-        solPanel.add(new JPanel()); // Boş panel, düzeni korumak için eklendi
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        solPanel.add(createLabel("Öğrenci Adı:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        solPanel.add(ogrenciAdField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        solPanel.add(createLabel("Öğrenci Soyadı:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        solPanel.add(ogrenciSoyadField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        solPanel.add(createLabel("Öğrenci Bölümü:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        solPanel.add(ogrenciBolumField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 4;
+        solPanel.add(createLabel("Öğrenci Dersleri:"), gbc);
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        solPanel.add(ogrenciDerslerField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 5;
+        gbc.gridwidth = 2;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        solPanel.add(new JPanel(), gbc); // Empty panel for layout consistency
+
+        gbc.gridx = 0;
+        gbc.gridy = 6;
+        gbc.gridwidth = 2;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        solPanel.add(kaydetButton, gbc);
+
+
 
         add(solPanel, BorderLayout.WEST);
         add(tableScrollPane, BorderLayout.CENTER);
@@ -168,13 +204,22 @@ public class OgrenciFormu extends JFrame {
 
         return derslerList;
     }
+    private JButton createStyledButton(String buttonText) {
+        JButton button = new JButton(buttonText);
+        button.setBackground(new Color(70, 130, 180)); // Steel Blue renk
+        button.setForeground(Color.WHITE);
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setFont(new Font("Arial", Font.BOLD, 14));
+        return button;
+    }
 
     private boolean validasyonKontrol() {
         try {
-            int ogrenciNo = Integer.parseInt(ogrenciNoField.getText());
+            long ogrenciNo = Long.parseLong(ogrenciNoField.getText());
             return true;
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Öğrenci No alanına sadece sayı girişi yapılabilir!");
+            JOptionPane.showMessageDialog(null, "Geçerli Öğrenci No Girin!","Hata", JOptionPane.ERROR_MESSAGE);
             return false;
         }
     }
@@ -186,7 +231,7 @@ public class OgrenciFormu extends JFrame {
         String dersAd = parts[1];
 
         Ogrenci ogrenci = new Ogrenci(
-                Integer.parseInt(ogrenciNoField.getText()),
+                Long.parseLong(ogrenciNoField.getText()),
                 ogrenciAdField.getText(),
                 ogrenciSoyadField.getText(),
                 ogrenciBolumField.getText(),
@@ -230,7 +275,7 @@ public class OgrenciFormu extends JFrame {
             while ((line = reader.readLine()) != null) {
                 JSONObject ogrenciJson = (JSONObject) jsonParser.parse(line);
                 Ogrenci ogrenci = new Ogrenci(
-                        Integer.parseInt(ogrenciJson.get("ogrenciNo").toString()),
+                        Long.parseLong(ogrenciJson.get("ogrenciNo").toString()),
                         (String) ogrenciJson.get("ogrenciAd"),
                         (String) ogrenciJson.get("ogrenciSoyad"),
                         (String) ogrenciJson.get("ogrenciBolum"),

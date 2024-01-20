@@ -1,24 +1,4 @@
-{"DersKodu": "1", "OgretimGorevlisi": "Ahmet Yılmaz", "DersDonem": "1", "DersAd": "Matematik"}
-{"DersKodu": "2", "OgretimGorevlisi": "Ayşe Demir", "DersDonem": "2", "DersAd": "Fizik"}
-{"DersKodu": "3", "OgretimGorevlisi": "Mehmet Yılmaz", "DersDonem": "1", "DersAd": "Kimya"}
-{"DersKodu": "4", "OgretimGorevlisi": "Fatma Kaya", "DersDonem": "2", "DersAd": "Biyoloji"}
-{"DersKodu": "5", "OgretimGorevlisi": "Mustafa Ak", "DersDonem": "1", "DersAd": "Tarih"}
-{"DersKodu": "6", "OgretimGorevlisi": "Zeynep Can", "DersDonem": "2", "DersAd": "Coğrafya"}
-{"DersKodu": "7", "OgretimGorevlisi": "Emre Yılmaz", "DersDonem": "1", "DersAd": "Edebiyat"}
-{"DersKodu": "8", "OgretimGorevlisi": "Sevim Akgün", "DersDonem": "2", "DersAd": "Müzik"}
-{"DersKodu": "9", "OgretimGorevlisi": "Hüseyin Demir", "DersDonem": "1", "DersAd": "Resim"}
-{"DersKodu": "10", "OgretimGorevlisi": "Şule Can", "DersDonem": "2", "DersAd": "Beden Eğitimi"}
-{"DersKodu": "11", "OgretimGorevlisi": "Nazlı Yılmaz", "DersDonem": "1", "DersAd": "Felsefe"}
-{"DersKodu": "12", "OgretimGorevlisi": "Burak Demir", "DersDonem": "2", "DersAd": "İngilizce"}
-{"DersKodu": "13", "OgretimGorevlisi": "Gül Akyüz", "DersDonem": "1", "DersAd": "Almanca"}
-{"DersKodu": "14", "OgretimGorevlisi": "Hasan Yıldız", "DersDonem": "2", "DersAd": "Fransızca"}
-{"DersKodu": "15", "OgretimGorevlisi": "Nihan Kaya", "DersDonem": "1", "DersAd": "İspanyolca"}
-{"DersKodu": "16", "OgretimGorevlisi": "Umut Çelik", "DersDonem": "2", "DersAd": "Rusça"}
-{"DersKodu": "17", "OgretimGorevlisi": "Deniz Arslan", "DersDonem": "1", "DersAd": "Matematik"}
-{"DersKodu": "18", "OgretimGorevlisi": "Aslı Yılmaz", "DersDonem": "2", "DersAd": "Fizik"}
-{"DersKodu": "19", "OgretimGorevlisi": "Engin Demir", "DersDonem": "1", "DersAd": "Kimya"}
-{"DersKodu": "20", "OgretimGorevlisi": "Zehra Yıldız", "DersDonem": "2", "DersAd": "Biyoloji"}
-{"DersKodu":"12","OgretimGorevlisi":"Ayşe Demir","DersDonem":"2","DersAd":"mate"}
-{"DersKodu":1,"OgretimGorevlisi":"Ahmet Yılmaz","DersDonem":2,"DersAd":"e"}
-{"DersKodu":101,"OgretimGorevlisi":"Ahmet Yılmaz","DersDonem":2,"DersAd":"fizik"}
-{"DersKodu":101,"OgretimGorevlisi":"Ilayda Kaya","DersDonem":2,"DersAd":"geometri"}
+{"DersKodu":202,"OgretimGorevlisi":"Mehtap Gül","DersDonem":2,"DersAd":"Fizik"}
+{"DersKodu":202,"OgretimGorevlisi":"Mehtap Gül","DersDonem":2,"DersAd":"Calculus"}
+{"DersKodu":101,"OgretimGorevlisi":"Ayşe Erciyes","DersDonem":1,"DersAd":"Matematik"}
+{"DersKodu":102,"OgretimGorevlisi":"Şeyma Tokgöz","DersDonem":1,"DersAd":"Kimya"}
