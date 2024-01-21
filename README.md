@@ -42,14 +42,14 @@ Bu uygulamada kullanılan `Ogrenci` sınıfı, öğrenci bilgilerini temsil etme
 
 ### Kullanım
 
-
+```java
 // Örnek kullanım
 Ogrenci ogrenci = new Ogrenci(123456789, "Ahmet", "Yılmaz", "Bilgisayar Mühendisliği", "Calculus", "101");
 
 // Yeni metodları kullanma
 System.out.println("Tam Ad: " + ogrenci.getTamAd());
 System.out.println("Öğrenci Bilgisi:\n" + ogrenci.getOgrenciBilgisi());
-
+ ```
 ## Ders Sınıfı
 - `dersKodu` (int): Dersin kodunu temsil eder.
 - `dersAd` (String): Dersin adını temsil eder.
