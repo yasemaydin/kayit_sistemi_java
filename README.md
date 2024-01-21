@@ -19,7 +19,7 @@ Bu ders kayıt uygulaması, öğrenci bilgilerini, Öğretim Görevlilerini, Der
 
 1. Uygulama başladığında, istediğiniz formu açın sol paneli kullanarak bilgileri girin.
 2. "Kaydet" butonuna tıklayarak bilgileri saklayın.
-3. Sağ üst köşedeki filtre alanını kullanarak öğrenci bilgilerini filtreleyin.
+3. Sağ üst köşedeki filtre alanını kullanarak bilgileri filtreleyin.
 4. Tablodaki bilgileri görüntülemek için filtreleme yapın veya tüm bilgileri görüntüleyin.
 
 ## Ogrenci Sınıfı
