@@ -67,7 +67,7 @@ System.out.println("Dönem: " + ders.getDersDonem());
 System.out.println("Öğretim Görevlisi: " + ders.getOgretimGorevlisi());
  ```
 
-# Metodlar
+### Metodlar
 
 `validasyonKontrol(): boolean`
 Bu metod, ders bilgilerinin geçerliliğini kontrol eder. Ders kodu ve dönem numarası sayısal olmalıdır.
@@ -94,27 +94,27 @@ Bu metod, ders tablosunu filtreler.
 
 ### Metodlar
 
-#### `validasyonKontrol(): boolean`
+ `validasyonKontrol(): boolean`
 
 Bu metod, öğretmen numarasının geçerliliğini kontrol eder. Öğretmen numarası pozitif bir tamsayı olmalıdır.
 
-#### `createStyledButton(String buttonText): JButton`
+ `createStyledButton(String buttonText): JButton`
 
 Bu metod, özel bir stile sahip bir JButton nesnesi oluşturur.
 
-#### `kaydetOgretimGorevlisi(): void`
+ `kaydetOgretimGorevlisi(): void`
 
 Bu metod, kullanıcının girdiği öğretim görevlisi bilgilerini JSON dosyasına kaydeder.
 
-#### `refreshOgretimGorevlisiTable(): void`
+ `refreshOgretimGorevlisiTable(): void`
 
 Bu metod, öğretim görevlisi tablosunu günceller.
 
-#### `okuOgretimGorevlileri(String dosyaAdi): List<JSONObject>`
+ `okuOgretimGorevlileri(String dosyaAdi): List<JSONObject>`
 
 Bu metod, öğretim görevlilerini içeren JSON dosyasını okur ve bir liste olarak döndürür.
 
-#### `filterOgretimGorevlisiTable(): void`
+ `filterOgretimGorevlisiTable(): void`
 
 Bu metod, öğretim görevlisi tablosunu filtreler.
 
